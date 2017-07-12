@@ -1,4 +1,4 @@
-.memory_board {
+#memory_board {
   background: #CCC;
   border: #999 1px solid;
   width: 800px;
@@ -8,7 +8,7 @@
   margin-top: 50px;
 }
 
-.memory_board > div {
+#memory_board > div {
   border: #000 1px solid;
   width: 71px;
   height: 71px;
