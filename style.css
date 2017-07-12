@@ -42,7 +42,10 @@
   border-radius: 6px;
 }
 
-
+.pageContainer {
+  display: flex;
+  justify-content: center;
+}
 
 
 .gameDescription {
