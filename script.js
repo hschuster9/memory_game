@@ -27,7 +27,7 @@ function newBoard(){
   memory_array.memory_tile_shuffle();
 
   for(var i = 0; i < memory_array.length; i++){
-    output += '<div id ="tile_'+i+'" onclick="memoryFlipTile(this, \''+memory_array[i]+'\')"></div>';
+    output += '<div id ="tile_'+i+'" onclick="memoryFlipTile(this, \''+memory_array[i]+'\')" style="background-color: #999;" class="col-xs-6 col-md-4 tileContainer"></div>';
   }
     document.getElementById('memory_board').innerHTML = output;
 }
@@ -55,11 +55,24 @@ function memoryFlipTile(tile, val){
         memory_tile_ids = [];
         //check if board is cleared
         if(tiles_flipped == memory_array.length){
-          alert('Game Over. Generating New Board');
+          alert('Good Job! Generating New Board');
           document.getElementById('memory_board').innerHTML = "";
-          newBoard();  
+          newBoard();
         }
+      } else {
+        function flipBack(){ //if tiles do not match - flip them back over
+          var tile_1 = document.getElementById(memory_tile_ids[0]);
+          var tile_2 = document.getElementById(memory_tile_ids[1]);
+          tile_1.style.background = `url('https://thumbs.dreamstime.com/z/canary-bird-yellow-feather-green-background-flat-design-style-vector-illustration-68955780.jpg') no-repeat`;
+          tile_1.style.backgroundSize = 'cover';
+          tile_1.innerHTML = "";
+          tile_2.style.background = `url('https://thumbs.dreamstime.com/z/canary-bird-yellow-feather-green-background-flat-design-style-vector-illustration-68955780.jpg') no-repeat`;
+          tile_2.style.backgroundSize = 'cover';
+          tile_2.innerHTML = "";
+          memory_values = [];
+          memory_tile_ids = [];
       }
+      setTimeout(flipBack, 800);
     }
     }
   }

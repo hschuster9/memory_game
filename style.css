@@ -6,16 +6,33 @@
   padding: 24px;
   margin: 0px auto;
   margin-top: 50px;
+
 }
 
 #memory_board > div {
-  border: #000 1px solid;
-  width: 71px;
-  height: 71px;
+  background: url('https://thumbs.dreamstime.com/z/canary-bird-yellow-feather-green-background-flat-design-style-vector-illustration-68955780.jpg') no-repeat;
+  background-size: cover;
+  /*border: #000 1px solid;*/
+  width: 105px;
+  height: 105px;
   float: left;
   margin: 10px;
   padding: 20px;
   font-size: 64px;
   cursor: pointer;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.tileContainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
