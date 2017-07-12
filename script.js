@@ -27,7 +27,7 @@ function newBoard(){
   memory_array.memory_tile_shuffle();
 
   for(var i = 0; i < memory_array.length; i++){
-    output += '<div id ="tile_'+i+'" onclick="memoryFlipTile(this, \''+memory_array[i]+'\')" style="background-color: #999;" class="col-xs-6 col-md-4 tileContainer"></div>';
+    output += '<div id ="tile_'+i+'" onclick="memoryFlipTile(this, \''+memory_array[i]+'\')" class="col-xs-6 col-md-4 tileContainer"></div>';
   }
     document.getElementById('memory_board').innerHTML = output;
 }
@@ -38,7 +38,7 @@ function memoryFlipTile(tile, val){
   //check to see if tile val is empty and amount of tiles flipped < 2
   if(tile.innerHTML == "" && memory_values.length < 2){
     //if true, "flip" card/style background and put the val in it
-    tile.style.background = '#FFF';
+    tile.style.background = '#f2f2f2';
     tile.innerHTML = val;
     //if array of flipped tiles is 0, put the val of flipped tile in it and its id
     if(memory_values.length == 0){

@@ -1,18 +1,17 @@
 #memory_board {
-  background: #CCC;
-  border: #999 1px solid;
+  background: #d8d8d8;
   width: 800px;
   height: 540px;
   padding: 24px;
   margin: 0px auto;
   margin-top: 50px;
+  border-radius: 10px;
 
 }
 
 #memory_board > div {
   background: url('https://thumbs.dreamstime.com/z/canary-bird-yellow-feather-green-background-flat-design-style-vector-illustration-68955780.jpg') no-repeat;
   background-size: cover;
-  /*border: #000 1px solid;*/
   width: 105px;
   height: 105px;
   float: left;
@@ -28,6 +27,7 @@
 .pageTitle {
   text-align: center;
   margin-top: 30px;
+  color: #6666ff;
 }
 
 .tileContainer {
@@ -35,4 +35,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #6666ff;
+  border-radius: 6px;
+}
+
+
+.gameDescription {
+  text-align: center;
+  color: #808080;
+  padding-top: 10px;
+
 }
